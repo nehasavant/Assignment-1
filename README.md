@@ -25,7 +25,7 @@ egrep -v -n "$Iris-versicolor|$Iris-setosa|$Iris-virginica" iris-data-dirty.csv
 sed -e 's/setsa/setosa/g' -e 's/versicolour/versicolor/g' iris-data-dirty.csv | grep -v 'NA' > iris-data-clean.csv
 
 #Outputs three values with the # of lines of each species.
-cut -d "," -f 5 iris-data-clean.csv | uniq -c
+cut -s -d "," -f 5 iris-data-clean.csv | uniq -c
 ```
 
 This link helped me find egrep so I can grep for multiple patterns: https://unix.stackexchange.com/questions/37313/how-do-i-grep-for-multiple-patterns  
